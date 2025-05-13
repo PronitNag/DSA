@@ -99,13 +99,19 @@ Return: TRUE
 
 ```python
 def containsDuplicate_hashSet(nums):
+        # Initialize an empty set to track elements we've already seen
     seen = set()
     
+    # Iterate through each element in the input array
     for num in nums:
+        # Check if we've already seen this element
         if num in seen:
+            # If so, we found a duplicate
             return True
+        # Add the current element to our set of seen elements
         seen.add(num)
     
+    # If we've checked all elements without finding duplicates
     return False
 ```
 
