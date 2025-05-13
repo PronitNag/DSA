@@ -200,21 +200,7 @@ Return TRUE     Return TRUE     Return TRUE
 
 
 
-# Test cases
-test_cases = [
-    [4, 2, 7, 2, 9],       # True (2 appears twice)
-    [1, 2, 3, 4, 5],       # False (all distinct)
-    [1, 1, 1, 3, 3, 4, 3], # True (multiple duplicates)
-    [],                    # False (empty array)
-]
 
-# Test sare methods
-for i, test in enumerate(test_cases):
-    print(f"Test Case {i+1}: {test}")
-    print(f"Brute Force: {containsDuplicate_bruteForce(test)}")
-    print(f"Sorting: {containsDuplicate_sorting(test)}")
-    print(f"HashSet: {containsDuplicate_hashSet(test)}")
-    print("-" * 40)
 ```
 
 ## Kaun Sa Method Best Hai? 🤔
