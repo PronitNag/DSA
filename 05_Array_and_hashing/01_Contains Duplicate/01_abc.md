@@ -7,9 +7,7 @@
 It is solved using three methods: 
 
 1)	Brute-force= compare every single number to other
-2)	
 3)	Sorting= and see if duplicates are adjacent
-4)	
 5)	Hash set to check if an element are present in hash set
 
 
