@@ -201,7 +201,6 @@ Return TRUE     Return TRUE     Return TRUE
 
 
 
-``` text
 
 ## Kaun Sa Method Best Hai? 🤔
 
@@ -230,4 +229,4 @@ O(n) Time & Space
 ```
 
 HashSet approach is usually the best choice for most practical scenarios jab tak aapko extra space use karne mein koi problem na ho. Iska time complexity sabse kam hai - O(n), aur code bhi simple aur readable hai. Yehi solution most interviews mein "optimal solution" maana jaata hai.
-```
+
