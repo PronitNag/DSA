@@ -198,53 +198,6 @@ Return TRUE     Return TRUE     Return TRUE
  END
 ```
 
-## Code Saare Teeno Methods Ke Saath Pura Solution 💻
-
-```python
-def containsDuplicate_bruteForce(nums):
-    """
-    Brute force method - har element ko baaki elements se compare karta hai
-    Time: O(n²), Space: O(1)
-    """
-    n = len(nums)
-    for i in range(n):
-        for j in range(i+1, n):
-            if nums[i] == nums[j]:
-                return True
-    return False
-
-
-def containsDuplicate_sorting(nums):
-    """
-    Sorting method - array ko sort karke adjacent elements check karta hai
-    Time: O(n log n), Space: O(1) or O(n) depending on sorting implementation
-    """
-    # Original array modify na karne ke liye sorted() use kiya
-    sorted_nums = sorted(nums)
-    
-    # Check adjacent elements
-    for i in range(len(sorted_nums) - 1):
-        if sorted_nums[i] == sorted_nums[i+1]:
-            return True
-    
-    return False
-
-
-def containsDuplicate_hashSet(nums):
-    """
-    HashSet method - set ka use karke duplicates check karta hai
-    Time: O(n), Space: O(n)
-    """
-    seen = set()
-    
-    for num in nums:
-        # Agar number pehle se set mein hai, toh duplicate mil gaya
-        if num in seen:
-            return True
-        # Nahi toh set mein add kar do
-        seen.add(num)
-    
-    return False
 
 
 # Test cases
