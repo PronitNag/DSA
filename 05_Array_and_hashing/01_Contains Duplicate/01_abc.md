@@ -4,6 +4,15 @@
 ### Problem Statement 🧩
 > Given ek integer array `nums`, return `true` agar koi value kam-se-kam do baar array mein appear hoti hai, aur return `false` agar har element distinct hai.
 
+It is solved using three methods: 
+
+1)	Brute-force= compare every single number to other
+2)	
+3)	Sorting= and see if duplicates are adjacent
+4)	
+5)	Hash set to check if an element are present in hash set
+
+
 ### Sample Input Array:
 ```
 [4, 2, 7, 2, 9]
