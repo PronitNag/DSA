@@ -166,6 +166,22 @@ Processing:
 
 Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
 
+
+### Time Complexity:
+Agar n strings hain aur har string ki average length k hai:
+
+- Har string ko sort karne mein O(k log k) time lagta hai
+- Har string ko process karne mein O(n * k log k) time lagta hai
+- Dictionary lookup aur insertion O(1) time leta hai
+- Total time complexity: O(n * k log k) hoga
+
+### Explanation:
+
+- Hum n strings ko iterate kar rahe hain, isliye O(n)
+- Har iteration mein, hum string ko sort karte hain jo O(k log k) time leta hai (jahan k string ki length hai)
+- Dictionary operations (checking, insertion) constant time O(1) lete hain
+- So overall time complexity O(n * k log k) ho jati hai
+
 ### Solution 2: Using Character Counting
 ```
 function groupAnagramsByCounting(strs):
@@ -183,6 +199,7 @@ function groupAnagramsByCounting(strs):
     
     return values of result as list
 ```
+
 
 ## Python Implementation
 
