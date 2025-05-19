@@ -130,6 +130,10 @@ function groupAnagramsBySorting(strs):
     
     return values of result as list
 ```
+### Step-by-Step Explanation:
+
+1. **Ek khali dictionary banao**: 
+   Sabse pehle function ek khali dictionary banata hai jisme hum anagrams ko store karenge
 
 2. **Har string ko process karo**:
    Input list mein di gayi har string ke liye:
