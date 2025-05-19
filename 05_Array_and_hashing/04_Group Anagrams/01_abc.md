@@ -131,6 +131,37 @@ function groupAnagramsBySorting(strs):
     return values of result as list
 ```
 
+2. **Har string ko process karo**:
+   Input list mein di gayi har string ke liye:
+   
+   a. **String ke characters ko sort karo**:
+      Jaise "eat" ko sort karne par "aet" milta hai
+      "tea" ko sort karne par bhi "aet" milta hai
+      
+   b. **Dictionary mein check karo**:
+      Agar sorted string (jaise "aet") already dictionary mein hai, toh kuch nahi karna.
+      Agar nahi hai, toh dictionary mein ek new key banao (sorted string) aur uske value ke roop mein ek khali list assign karo.
+      
+   c. **Original string ko add karo**:
+      Original string (jaise "eat" ya "tea") ko sorted string key ke corresponding list mein add karo.
+
+3. **Result return karo**:
+   Dictionary ke saare values (jo ki lists hain) ko ek list mein convert karke return karo.
+
+## Example:
+
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+Processing:
+- "eat" → sort → "aet" → dictionary: {"aet": ["eat"]}
+- "tea" → sort → "aet" → dictionary: {"aet": ["eat", "tea"]}
+- "tan" → sort → "ant" → dictionary: {"aet": ["eat", "tea"], "ant": ["tan"]}
+- "ate" → sort → "aet" → dictionary: {"aet": ["eat", "tea", "ate"], "ant": ["tan"]}
+- "nat" → sort → "ant" → dictionary: {"aet": ["eat", "tea", "ate"], "ant": ["tan", "nat"]}
+- "bat" → sort → "abt" → dictionary: {"aet": ["eat", "tea", "ate"], "ant": ["tan", "nat"], "abt": ["bat"]}
+
+Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
 ### Solution 2: Using Character Counting
 ```
 function groupAnagramsByCounting(strs):
